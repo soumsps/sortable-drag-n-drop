@@ -17,15 +17,58 @@
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
+.drag-n-drop {
+  padding: 0.5rem;
+  display: grid;
+  gap: 0.5rem;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: repeat(auto-fill, 300px);
+  align-items: start;
+}
+
+.dnd-group {
+  background-color: #535353;
+  border-radius: 5px;
+  padding: 0.5rem;
+}
+
+.group-title {
+  font-size: 1.6rem;
+}
+
+.dnd-item:not(:last-of-type) {
+  margin-bottom: 5px;
+}
+.dnd-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 150px;
+  background-color: aliceblue;
+  border-radius: 5px;
+  color: #003544;
+}
+
+.dnd-item * {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
 .App-link {
   color: #61dafb;
+}
+
+.current {
+  background-color: #037eb8;
+  opacity: 0.5;
 }
 
 @keyframes App-logo-spin {
